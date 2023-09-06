@@ -5,43 +5,43 @@
 
 Прізвище!
 
-## Introduction
-This project is a Java-based application built with the Javalin framework. Its primary goal is to provide a platform for users to create their own world by sharing their thoughts, experiences, and impressions with their audience. With this blog, users can share their ideas with the world and connect with others who share similar interests.
+## Вступ
+Цей проект є програмою на основі Java, створеною за допомогою фреймворку Javalin. Його основна мета — надати користувачам платформу для створення власного світу, ділячись своїми думками, досвідом і враженнями зі своєю аудиторією. За допомогою цього блогу користувачі можуть ділитися своїми ідеями зі світом і спілкуватися з іншими, хто має подібні інтереси.
 
 ## Features
-* **User authentication:** users can [sign up](./_images/sign-up.png), [sign in](./_images/sign-in.png), and [sign out](./_images/sign-out.png) securely.
-* **Password recovery:** users can [reset their password](./_images/reset-password.png) if they forget it.
-* **Account management:** users can [edit their account](./_images/account-editing.png) information.
-* **Create and publish posts:** users can [write and publish posts](./_images/posting.png) on their own blog.
-* **Leave comments:** users can [comment on posts](./_images/commenting.png) and interact with other readers.
-* **View posts and comments:** users can [view their own posts, comments](./_images/view-posting.png), as well as other users' posts and comments.
+* **Автентифікація користувача:** користувачі можуть [зареєструватися](./_images/sign-up.png), [увійти](./_images/sign-in.png) і [вийти](./_images/sign -out.png) безпечно.
+* **Password recovery:** користувачі можуть [скинути свій пароль](./_images/reset-password.png), якщо забули його.
+* **Account management:** користувачі можуть [редагувати інформацію свого облікового запису](./_images/account-editing.png).
+* **Створюйте та публікуйте дописи:** користувачі можуть [писати та публікувати дописи](./_images/posting.png) у власному блозі.
+* **Leave comments:** користувачі можуть [коментувати публікації](./_images/commenting.png) і взаємодіяти з іншими читачами.
+* **View posts and comments:** користувачі можуть [переглядати власні публікації, коментарі](./_images/view-posting.png), а також публікації та коментарі інших користувачів.
 
 ## Getting Started
 
 ### Prerequisites
-To build and run this project, you will need:
+Щоб створити та запустити цей проект, вам знадобиться:
 * [Java 17+](https://download.java.net/openjdk/jdk17/ri/openjdk-17+35_windows-x64_bin.zip)
 * [Maven](https://dlcdn.apache.org/maven/maven-3/3.9.0/binaries/apache-maven-3.9.0-bin.zip)
 * [SQLite](https://www.sqlite.org/2023/sqlite-tools-win32-x86-3410000.zip)
 * [Make](https://deac-fra.dl.sourceforge.net/project/gnuwin32/make/3.81/make-3.81-bin.zip) and its [dependencies](https://altushost-swe.dl.sourceforge.net/project/gnuwin32/make/3.81/make-3.81-dep.zip) (optional, but recommended for an optimized development workflow)
 * [MailHog](https://github.com/mailhog/MailHog/releases/download/v1.0.1/MailHog_windows_amd64.exe) (required if you want to test email functionality locally. Otherwise, you can modify the run properties to use a public SMTP server)
 
-Your next step will be to follow these instructions:
-1. Download Java 17 (or newer) zip-archive from the provided link and extract it to a location of your choice.
-2. If you are not using a bundled version of Maven from an IDE like [IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=windows), download the Maven zip-archive and extract it to a location of your choice as well.
-3. SQLite command line tool called sqlite3.exe is already included in the project files folder, so you don't need to install it separately.
-4. If you want to optimize your development workflow, you can install Make with its dependencies for Windows. To do this, download the Make zip-archive and extract the bin folder with the make.exe program. Place the dependencies (such as libintl3.dll and libiconv2.dll) in the same folder.
-5. Modify your Path system environment variable to include the paths to the bin folders for Java, Maven, SQLite, and Make (if installed). Make sure the paths include the bin folder name.
-6. MailHog doesn't require installation as it is a standalone local SMTP server. You can simply place the executable file wherever you prefer.
+Вашим наступним кроком буде дотримання цих інструкцій:
+1. Завантажте zip-архів Java 17 (або новіший) за наданим посиланням і розпакуйте його у вибране вами місце.
+2. Якщо ви не використовуєте пакетну версію Maven із IDE, наприклад [IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=windows), завантажте zip-архів Maven і також розпакуйте його у вибране вами місце.
+3. SQLite Інструмент командного рядка під назвою sqlite3.exe уже включено в папку файлів проекту, тому вам не потрібно встановлювати його окремо.
+4. Якщо ви хочете оптимізувати робочий процес розробки, ви можете встановити Make із його залежностями для Windows. Для цього скачайте zip-архів Make і розпакуйте папку bin програмою make.exe. Розмістіть залежності (наприклад, libintl3.dll і libiconv2.dll) в одній папці.
+5. Змініть системну змінну середовища Path, щоб включити шляхи до папок bin для Java, Maven, SQLite та Make (якщо встановлено). Переконайтеся, що шляхи містять назву папки bin.
+6. MailHog не потребує встановлення, оскільки це окремий локальний SMTP-сервер. Ви можете просто розмістити виконуваний файл, де забажаєте.
 
 ### Installation
-1. Download or clone the project repository to your local machine using `git clone https://github.com/Fluffy777/universe.git .` (where `.` will be your current folder).
-2. Open a command shell from the root folder of the project.
-3. Run the following command to generate an SQLite database in the project folder: `make migrate`
-4. Build the project by running the following command: `make`
+1. Завантажте або клонуйте репозиторій проекту на локальну машину за допомогою `git clone https://github.com/Fluffy777/universe.git .` (де `.` буде вашою поточною папкою).
+2. Відкрийте командну оболонку з кореневої папки проекту.
+3. Виконайте таку команду, щоб створити базу даних SQLite у папці проекту: `make migrate`
+4. Створіть проект, виконавши таку команду: `make`
 
 ### Configuration
-To configure the web application, edit the parameter values in a .properties file. By default, the file is called `application.properties` if you use the make tool. Otherwise, you can name it anything and specify it as a call argument. You can also use environment variables. The settings of the application's aspects, including the embedded Jetty web server properties, mailing configuration, security strength, and database connection details, are determined by their usage. The project repository has [a file with default values set](application.properties), which you can use. For more flexibility, refer to the table below.
+Щоб налаштувати веб-програму, відредагуйте значення параметрів у файлі .properties. За замовчуванням файл називається `application.properties`, якщо ви використовуєте інструмент make. В іншому випадку ви можете назвати його як завгодно та вказати як аргумент виклику. Ви також можете використовувати змінні середовища. Налаштування аспектів програми, включаючи властивості вбудованого веб-сервера Jetty, конфігурацію розсилки, рівень безпеки та деталі підключення до бази даних, визначаються їх використанням. У репозиторії проекту є [файл із встановленими значеннями за замовчуванням](application.properties), який ви можете використовувати. Для більшої гнучкості зверніться до таблиці нижче.
 
 |Key|Value|
 |---|---|
@@ -58,7 +58,7 @@ To configure the web application, edit the parameter values in a .properties fil
 |mail.auth|Determines whether or not the email sender should be authenticated on the SMTP server|
 
 ### Run
-1. If you prefer to use a local SMTP server, run MailHog. Note that the default host is set to 0.0.0.0, which means "localhost" in the context of this program. The default ports are 1025 for SMTP connections and 8025 for HTTP connections, which provide a useful web interface for email management.
-2. Start the application by running the following command from the command shell: `make run`
+1. Якщо ви віддаєте перевагу використанню локального сервера SMTP, запустіть MailHog. Зауважте, що хостом за замовчуванням встановлено 0.0.0.0, що в контексті цієї програми означає «localhost». Стандартними портами є 1025 для з’єднань SMTP і 8025 для з’єднань HTTP, які забезпечують корисний веб-інтерфейс для керування електронною поштою.
+2. Запустіть програму, виконавши наступну команду з командної оболонки: `make run`
 
-That's it! The application should be up and running now, and you can access it at the specified port and URL in your web browser.
+Це воно! Програма має бути запущена та запущена, і ви можете отримати доступ до неї за вказаним портом та URL-адресою у веб-браузері.
