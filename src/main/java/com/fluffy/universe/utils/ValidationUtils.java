@@ -6,7 +6,7 @@ import io.javalin.http.HttpCode;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public final class ValidationUtils {
+public class ValidationUtils {
     private ValidationUtils() {}
 
     public static boolean isValidPassword(String password) {
