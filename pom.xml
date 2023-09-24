@@ -16,45 +16,29 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
-    <javalin.version>5.4.2</javalin.version>
+    <javalin.version>4.6.7</javalin.version>
   </properties>
 
   <dependencies>
-    <!-- https://mvnrepository.com/artifact/io.javalin/javalin -->
     <dependency>
       <groupId>io.javalin</groupId>
       <artifactId>javalin</artifactId>
-      <version>5.6.2</version>
+      <version>${javalin.version}</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-api</artifactId>
-      <version>5.10.0</version>
-      <scope>test</scope>
-    </dependency>
-
-    <!-- https://mvnrepository.com/artifact/io.javalin/javalin-openapi -->
     <dependency>
       <groupId>io.javalin</groupId>
       <artifactId>javalin-openapi</artifactId>
-      <version>4.6.8</version>
+      <version>${javalin.version}</version>
     </dependency>
-
-<!--    <dependency>-->
-<!--      <groupId>io.javalin</groupId>-->
-<!--      <artifactId>javalin-openapi</artifactId>-->
-<!--      <version>${javalin.version}</version>-->
-<!--    </dependency>-->
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
-      <version>2.0.5</version>
+      <version>1.8.0-beta4</version>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
-      <version>2.0.5</version>
+      <version>1.8.0-beta4</version>
     </dependency>
     <dependency>
       <groupId>org.apache.velocity</groupId>
@@ -64,7 +48,7 @@
     <dependency>
       <groupId>dev.akkinoc.util</groupId>
       <artifactId>yaml-resource-bundle</artifactId>
-      <version>2.9.1</version>
+      <version>2.1.0</version>
     </dependency>
     <dependency>
       <groupId>org.xerial</groupId>
@@ -84,59 +68,51 @@
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-core</artifactId>
-      <version>6.0.2</version>
+      <version>6.0.1</version>
     </dependency>
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-text</artifactId>
       <version>1.10.0</version>
     </dependency>
-      <dependency>
-          <groupId>org.junit.jupiter</groupId>
-          <artifactId>junit-jupiter</artifactId>
-          <version>5.9.2</version>
-          <scope>test</scope>
-      </dependency>
+
+<!--    new dependencies-->
+    <!-- https://mvnrepository.com/artifact/org.junit/org.junit -->
+    <!-- https://mvnrepository.com/artifact/junit/junit -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>5.10.0</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter -->
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-junit-jupiter</artifactId>
+      <version>5.5.0</version>
+      <scope>test</scope>
+    </dependency>
+
+
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
       <version>4.12.1</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore -->
-    <dependency>
-      <groupId>org.apache.httpcomponents</groupId>
-      <artifactId>httpcore</artifactId>
-      <version>4.4.16</version>
-    </dependency>
 
 
 
 
 
-    <dependency>
-      <groupId>org.mockito</groupId>
-      <artifactId>mockito-junit-jupiter</artifactId>
-      <version>5.2.0</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.mockito</groupId>
-      <artifactId>mockito-inline</artifactId>
-      <version>5.2.0</version>
-      <scope>test</scope>
-    </dependency>
-<!--    <dependency>-->
-<!--      <groupId>io.javalin</groupId>-->
-<!--      <artifactId>javalin</artifactId>-->
-<!--      <version>4.6.7</version>-->
-<!--    </dependency>-->
+
   </dependencies>
 
   <build>
@@ -213,7 +189,6 @@
           </execution>
         </executions>
       </plugin>
-
     </plugins>
   </build>
 </project>
