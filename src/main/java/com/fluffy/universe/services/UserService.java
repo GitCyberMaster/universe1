@@ -12,6 +12,7 @@ import org.sql2o.Connection;
 import java.sql.SQLException;
 
 public final class UserService {
+
     private UserService() {}
 
     private static final int BCRYPT_STRENGTH = Configuration.getAsClass("application.bcryptStrength", Integer.class);
