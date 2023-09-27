@@ -2,12 +2,14 @@ package com.fluffy.universe.models;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Spy;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 
 class UserTest {
+    @Spy
     User user = new User();
 
 
