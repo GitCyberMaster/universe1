@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: GitCyberMaster/action-checkstyle@0
+      - uses: GitCyberMaster/action-checkstyle@0.15.0
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review
